@@ -9,7 +9,13 @@ def sum_of_3_or_5_multiples(final_number)
 
   somme = 0
   (0...final_number).each do |n|
-    somme += n if is_multiple_of_3_or_5?(n)
+    if is_multiple_of_3_or_5?(n)
+      somme += n
+    endss
   end
   somme
+end
+
+if __FILE__ == $0
+  puts sum_of_3_or_5_multiples(1000)   
 end
